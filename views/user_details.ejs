@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1>Register</h1>
+        <a href="/">Index</a>
+        <a href="/login">Login</a>
+        <br><br>
+        <form action="/user_details" method="post">
+            <label for="user.id">user.id : </label><br>
+            <input type="text" name="userid" readonly=true value="<%= user.id %>"><br>
+            <label for="firstname">Имя : </label><br>
+            <input type="text" name="firstname" value="<%= user.firstname %>" /><br>
+            <label for="lastname">Фамилия : </label><br>
+            <input type="text" name="lastname" value="<%= user.lastname %>"><br>
+            <label for="email">Email : </label><br>
+            <input type="text" name="email" value="<%= user.email %>"><br>
+            <label for="password">Пароль : </label><br>
+            <input type="password" name="password" value=""><br>
+            <label for="confirmed_password">Подтвержденный пароль : </label><br>
+            <input type="password" name="confirmedPassword" value=""><br>
+            <label for="name">Name : </label><br>
+            <input type="text" name="name" placeholder="Name..."><br>
+            <label for="city">City : </label><br>
+            <input type="text" name="city" placeholder="City..."><br>
+            <input type="submit" value="Сохранить">
+        </form>
+    </body>
+</html>

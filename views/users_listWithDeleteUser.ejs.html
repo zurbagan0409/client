@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Users's List</title>
+    </head>
+    <body>
+        <h1>Users's List</h1>
+        <a href="/">Index</a>
+        <a href="/login">Login</a>
+        <br><br>
+        <form action="/register" method="post">
+        <table border="1"><thead><tr>
+            <td><label for="id"> №: </label></td>
+            <td><label for="firstname">Имя : </label></td>
+            <td><label for="lastname">Фамилия : </label></td>
+            <td><label for="email">Email : </label></td>
+            <td><label for="password">Пароль : </label></td>
+            </tr>
+            </thead>
+            <tbody>
+             <% users.forEach(function(user) { %>
+            <tr>
+            <td><%= user.id %></td>
+            <td><%= user.firstname %></td>
+            <td><%= user.lastname %></td>
+            <td><%= user.email %></td>
+            <td><%= user.password %></td>
+            </tr>
+             <% }); %>
+            </tbody>
+        </table>    
+            <input type="submit">
+        </form>
+    </body>
+</html>
